@@ -17,7 +17,7 @@ guess
   -> ([Ordering], [Int])
 guess leftNs inputN = (results, map snd onlyNonMatched)
   where
-    nonMatched = (EQ /=) . fst
+    nonMatched (result, _) = result /= EQ
     results = map (compare inputN) leftNs
     onlyNonMatched = filter nonMatched (zip results leftNs)
 
