@@ -38,6 +38,9 @@ playOnceWith initialNs =
 
 playOnceCountingFrom :: Int -> [Int] -> IO ()
 playOnceCountingFrom count ns = do
+  putStrLn ""
+  putStrLn ("Left numbers: " ++ show (length ns))
+
   putStr "Guess a number: "
   input <- getLine
   let (results, leftNs) = guess ns (read input)
@@ -50,7 +53,6 @@ playOnceCountingFrom count ns = do
       putStrLn ("Congratulations! All numbers have matched!")
       putStrLn ("You have guessed " ++ show count ++ " times.")
     else do
-      putStrLn ("Left numbers: " ++ show (length leftNs))
       playOnceCountingFrom (count + 1) leftNs
 
 tellResult :: Ordering -> IO ()
@@ -63,5 +65,4 @@ askNumbers :: IO [Int]
 askNumbers = do
   putStr "Enter some numbers separated by space: "
   s <- bracket_ (hSetEcho stdin False) (hSetEcho stdin True) getLine
-  putStrLn ""
   return (map read (words s))
