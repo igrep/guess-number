@@ -1,4 +1,4 @@
-module Lib
+module NoMonad
   ( playOnce
   ) where
 
