@@ -1,4 +1,4 @@
-module NoMonad
+module NonMonadic
   ( playOnce
   ) where
 

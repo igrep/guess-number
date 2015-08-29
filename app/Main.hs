@@ -1,6 +1,6 @@
 module Main where
 
-import qualified NoMonad
+import qualified NonMonadic
 
 main :: IO ()
-main = NoMonad.playOnce
+main = NonMonadic.playOnce
