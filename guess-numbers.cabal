@@ -5,9 +5,9 @@ description:         Please see README.md
 homepage:            http://github.com/igrep/guess-numbers#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Example Author Name
-maintainer:          example@example.com
-copyright:           2010 Author Here
+author:              Yuji Yamamoto
+maintainer:          whosekiteneverfly@gmail.com
+copyright:           2015 Yuji Yamamoto
 category:            Web
 build-type:          Simple
 -- extra-source-files:
