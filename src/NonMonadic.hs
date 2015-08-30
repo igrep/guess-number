@@ -3,8 +3,9 @@ module NonMonadic
   ) where
 
 import Control.Monad (forM_)
-import System.IO (hSetBuffering, BufferMode(..), hSetEcho, stdout, stdin)
 import Control.Exception (bracket_)
+
+import System.IO (hSetBuffering, BufferMode(..), hSetEcho, stdout, stdin)
 
 {-
   - Setter: sets some numbers.
